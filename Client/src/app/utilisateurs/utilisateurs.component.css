@@ -1,0 +1,23 @@
+.an-user-container{
+  height: auto;
+  padding: 10px;
+  width: 90%;
+  margin-top: 10px;
+  border-radius: 1px;
+  align-items:flex-start;
+  background-color: #7289da;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: #A098A5;
+  border-radius: 8px;
+  transition: ease-in 0.2s;
+}
+
+.an-user-container:hover{
+  background-color: #4d6dde;
+  color: #ddd;
+  transition: ease-in 0.1s;
+}
+
+.an-user{
+  display: inline-block;
+}

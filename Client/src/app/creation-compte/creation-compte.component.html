@@ -1,0 +1,51 @@
+<div class="main-container">
+
+  <div class="main-container-center">
+
+    <div class="left-container">
+      <div class="main-container-left">
+        <div class="logo"></div>
+        <div class="name-discord"></div>
+      </div>
+    </div>
+    <form class="right-container">
+
+      <h1 class="title">Créer un compte</h1>
+
+      <form id="form-login" #contactForm="ngForm">
+
+        <div class="group">
+          <input type="text" [(ngModel)]="usernames.email" name="email" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>email</label>
+        </div>
+        <div class="group">
+          <input type="text" [(ngModel)]="usernames.username" name ="username" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>nom d'utilisateur</label>
+        </div>
+        <div class="group">
+          <input type="password" [(ngModel)]="usernames.password" name="password" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>mot de passe</label>
+        </div>
+        <button (click)="saveUser()" type="button" class="button buttonPurple">Continuer
+          <div class="ripples buttonRipples">
+            <span class="ripplesCircle"></span>
+          </div>
+        </button>
+      </form>
+
+      <!-- FOOTER-->
+      <div class="footer">
+        <p>Vous avez déjà un compte ?&nbsp; <a [routerLink]="['/login']">Login</a></p>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+

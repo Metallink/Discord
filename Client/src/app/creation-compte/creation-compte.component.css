@@ -1,0 +1,302 @@
+.main-container{
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: 650px;
+  height: 550px;
+}
+
+.main-container-center{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+
+  /*width: 450px;
+  margin: 100px auto;
+  padding: 10px;*/
+
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px #555;
+}
+
+
+
+
+
+
+/* =========== LOGO (PARTIE GAUCHE) =========== */
+
+.left-container {
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  padding: 50px;
+}
+
+.left-container .main-container-left {
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: 100%;
+
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.left-container .main-container-left .logo{
+
+  background: url("../../assets/icons/icon-discord.svg");
+  background-size: 150px 150px;
+  height: 150px;
+  width: 150px;
+
+}
+
+.left-container .main-container-left .name-discord{
+
+  background-image: url("../../assets/icons/nom-discord.svg");
+  background-repeat: no-repeat;
+  height: 25px;
+  margin-bottom: 12px;
+  margin-top: 30px;
+  position: relative;
+
+}
+
+
+
+
+
+
+/* =========== FORMULAIRE (PARTIE DROITE) ===========*/
+
+.right-container {
+
+  position: relative;
+
+  background-color: rgba(30,30,35,0.8);
+  border-radius: 0;
+
+  padding: 30px;
+  width: 400px;
+
+}
+
+.right-container .title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.right-container #form-login {
+
+  width: 96%;
+  margin: 3em auto;
+  padding: 3em 2em 2em 2em;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+  /*display:block;*/
+}
+
+.right-container #form-login .group {
+  position: relative;
+  margin-bottom: 45px;
+
+}
+
+.right-container #form-login input {
+  /*-webkit-appearance: none;*/
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  background: #fafafa;
+  color: #636363;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #757575;
+}
+
+.right-container #form-login input:focus {
+  outline: none; /* pour enlever le carré autour */
+}
+
+label {
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: absolute;
+  pointer-events: none; /* rend le label inatic */
+  left: 5px;
+  top: 10px;
+  transition: all 0.2s ease;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* animation qui fait monter le texte lorsque l'input est active */
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  /*transform: scale(.75); left: -2px;*/
+  font-size:14px;
+  color: #4a89dc;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #4a89dc;
+  transition: all 0.2s ease;
+  /*-moz-transition:0.2s ease all;*/
+  /*-webkit-transition:0.2s ease all;*/
+}
+
+/* Effet bar */
+.bar:before {
+  left: 50%;
+}
+
+/* Effet bar */
+.bar:after {
+  right: 50%;
+}
+
+/* Animation bar quand input focus */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* grossissement bar quand input est focus */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* === ANIMATIONS === */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+/*=== BOUTON ===*/
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: .3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.buttonPurple {
+  background: #7289da;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+}
+
+.buttonPurple:hover {
+  background: #697ec4;
+}
+
+.footer {
+  color: #87909c;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: -10px;
+  text-align: center;
+  display: block;
+}
+
+.footer a {
+
+  text-decoration: none;
+  color: white;
+  transition: opacity .5s, color .5s;
+  cursor: pointer;
+  font-weight: bolder;
+  /*border: solid 3px purple;*/
+  width: 50px;
+  margin: auto;
+}
+
+.footer a:hover {
+  color: #fafafa;
+  text-decoration: underline;
+  /*border-bottom: white 3px solid;*/
+  /*padding-bottom: 3px;*/
+}
+
+

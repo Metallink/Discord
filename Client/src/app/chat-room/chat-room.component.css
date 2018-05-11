@@ -1,0 +1,49 @@
+.main-container{
+  display: flex;
+  height: 100vh;
+
+  background-image: url("../../assets/images/ff15-bg-2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.user-list-container {
+  background-color: #2f3136;
+  color: #fff;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  flex: 1;
+  order: 1;
+  padding:20px 0px 40px 30px;
+  border-right: 1px solid #222;
+}
+
+.feed-container {
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  flex: 5;
+  order: 2;
+  overflow-y: scroll;
+  padding:20px 0px 0px 24px;
+}
+
+.saisie-container {
+  display: flex;
+  height: 50px;
+  background-color: #eee;
+  z-index: 3;
+}
+
+#scroll-style::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+app-liste-utilisateurs {
+  width: 100%;
+}
