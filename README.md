@@ -7,9 +7,9 @@ I put more effort on that part as I was focused on discovering and practicing An
 I spent more time trying different stuff and was actually more in the mood of learning this framework.
 
 # Back-end
-For the back-end, I first start to implement the server side using Java but then I decided to use the Spring framework which was more difficult than i expected.
-I will come back to that part later in my freetime and will choose to start over using Node.js. That way I will have a JS fullstack application.
+For the back-end, I first started to implement the server side using Java but then I decided to use the Spring framework which was more difficult than i expected.
+I will come back to that part later too in my freetime and will choose to start over using Node.js. That way I will have a JS fullstack application.
 
 # Database
-We also had to implement a DB. I first used JPA then changed my mind to use MongoDB. 
-I will also start over this part using Firebase as a complement to AngularJS.
+We also had to implement a DB. I first used JPA but then I changed my mind and used MongoDB. 
+I will also start over this part by using Firebase as a complement to AngularJS.
